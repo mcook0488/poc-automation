@@ -1,0 +1,18 @@
+package mcook.GoogleTest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    
+        System.out.println( "Google Search Test" );
+    
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.google.com");
+        WebElement element = driver.FindElement(By.name("q"));
+        element.sendKeys("Animal");
+        element.submit();
+}
